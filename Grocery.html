@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>local market</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+ 
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"><span class="logo-icon"> 
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61l1.38-7.39H6"/></svg>
+    </span><span class="logo-text">localmarket</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <!-- <li><a href="customer-login.html">Login</a></li> -->
+      <li><a href="add-to-cart.html"><span style="display:inline-flex;align-items:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3c17f3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61l1.38-7.39H6"/></svg> Add to Cart</span></a></li>
+      
+    </ul>
+
+    <form id="siteSearchForm" style="margin-left: 20px; display: flex; align-items: center;">
+      <input type="text" id="siteSearchInput" placeholder="Search..." style="padding: 5px; border-radius: 4px; border: 1px solid #ccc;">
+      <button type="submit" style="margin-left: 5px; padding: 5px 10px; border-radius: 4px; border: none; background: #333; color: #fff;">Search</button>
+    </form>
+    <button id="modeToggle">🌙</button>
+  </nav>
+
+
+<section id="categories">
+  <div id="accadamic_books">
+    <h2>oil packets</h2>
+  </div>
+ <div class="cards">
+    <div class="card" id="stationary">
+        <img src="images/inter_books.webp" class="enlargeable" />
+        <p>freedam oil</p>
+      
+        <label for="book-type">Choose Type:</label>
+        <select id="book-type" class="book-type-selector">
+
+          <option value="80" data-name="telugu">half letter- ₹80</option>
+          <option value="80" data-name="english">litter- ₹80</option>
+          <option value="80" data-name="hindi">5 litters - ₹80</option> 
+          <option value="80" data-name="Sanskrit">10 litters- ₹80</option>
+
+        </select>
+      
+        <div class="card-action-row">
+          <div class="item-rate" id="book-price">₹80</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card" id="fancy">
+        <img src="images/inter_books.webp" class="enlargeable" />
+        <p>SUN FLOWER</p>
+      
+        <label for="book-type">Choose Type:</label>
+        <select id="book-type" class="book-type-selector">
+
+          <option value="80" data-name="telugu">HALF LETTER - ₹80</option>
+          <option value="80" data-name="english">LITTER - ₹80</option>
+          <option value="80" data-name="hindi">5 LITTERS - ₹80</option> 
+          <option value="80" data-name="Sanskrit">10 LITTERS - ₹80</option>
+
+        </select>
+      
+        <div class="card-action-row">
+          <div class="item-rate" id="book-price">₹80</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    
+      <div class="card" id="supermarket">
+        <img src="images/inter_books.webp" class="enlargeable" />
+        <p></p>
+      
+        <label for="book-type">Choose Type:</label>
+        <select id="book-type" class="book-type-selector">
+
+          <option value="80" data-name="telugu">telugu - ₹80</option>
+          <option value="80" data-name="english">english - ₹80</option>
+          <option value="80" data-name="hindi">hindi - ₹80</option> 
+          <option value="80" data-name="Sanskrit">Sanskrit - ₹80</option>
+
+          <option value="120" data-name="Mathematics IA">Mathematics IA - ₹120</option>
+          <option value="120" data-name="Mathematics IB">Mathematics IB - ₹120</option>
+          <option value="100" data-name="Economics Iyear">Economics Iyear - ₹100</option>
+          <option value="110" data-name="Commerce Iyear">Commerce Iyear - ₹110</option>
+
+          <option value="80" data-name="telugu IIyear">telugu IIyear   - ₹80</option>
+          <option value="80" data-name="english IIyear">english IIyear - ₹80</option>
+          <option value="80" data-name="hindi IIyear">hindi IIyear- ₹80</option> 
+          <option value="80" data-name="Sanskrit IIyear">Sanskrit IIyear- ₹80</option>
+
+          <option value="120" data-name="Mathematics IIA">Mathematics IIA - ₹120</option>
+          <option value="120" data-name="Mathematics IIB">Mathematics IIB - ₹120</option>
+          <option value="100" data-name="Economics IIyear">Economics IIyear - ₹100</option>
+          <option value="110" data-name="Commerce IIyear">Commerce IIyear - ₹110</option>
+          
+          <option value="600" data-name="Iyear all books ">I_year all books - ₹600</option>
+          <option value="600" data-name="IIyear all books ">II_year all books - ₹600</option>
+        </select>
+      
+        <div class="card-action-row">
+          <div class="item-rate" id="book-price">₹80</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card" id="food">
+        <img src="images/inter_books.webp" class="enlargeable" />
+        <p>inter_Books CEC </p>
+      
+        <label for="book-type">Choose Type:</label>
+        <select id="book-type" class="book-type-selector">
+
+          <option value="80" data-name="telugu">telugu - ₹80</option>
+          <option value="80" data-name="english">english - ₹80</option>
+          <option value="80" data-name="hindi">hindi - ₹80</option> 
+          <option value="80" data-name="Sanskrit">Sanskrit - ₹80</option>
+
+          <option value="100" data-name="Civics Iyear">Civics Iyear - ₹100</option>
+          <option value="100" data-name="Economics Iyear">Economics Iyear - ₹100</option>
+          <option value="110" data-name="Commerce Iyear">Commerce Iyear - ₹110</option>
+
+          <option value="80" data-name="telugu IIyear">telugu IIyear   - ₹80</option>
+          <option value="80" data-name="english IIyear">english IIyear - ₹80</option>
+          <option value="80" data-name="hindi IIyear">hindi IIyear- ₹80</option> 
+          <option value="80" data-name="Sanskrit IIyear">Sanskrit IIyear- ₹80</option>
+
+          <option value="100" data-name="Civics IIyear">Civics IIyear - ₹100</option>
+          <option value="100" data-name="Economics IIyear">Economics IIyear - ₹100</option>
+          <option value="110" data-name="Commerce IIyear">Commerce IIyear - ₹110</option>
+          
+          <option value="600" data-name="Iyear all books ">I_year all books - ₹600</option>
+          <option value="600" data-name="IIyear all books ">II_year all books - ₹600</option>
+
+        </select>
+      
+        <div class="card-action-row">
+          <div class="item-rate" id="book-price">₹80</div>
+          <button class="add-to-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+
+
+
+
+      
+    </section>
+
+    <section id="categories">
+      <div id="accadamic_books">
+        <h2>Degree_Books</h2>
+      </div>
+     <div class="cards">
+        <div class="card">
+            <img src="images/inter_books.webp" class="enlargeable" />
+            <p>B.Sc(Maths, Physics, Chemistry - MPC)</p>
+          
+            <label for="year-select">Choose Type:</label>
+            <select id="book-type" class="book-type-selector">
+    
+              <option value="130" data-name="Mathematics-I Sem 1">Mathematics Sem 1 - ₹150</option>
+              <option value="130" data-name="Physics-mechanics sem1">Physics sem1 - ₹130</option>
+              <option value="130" data-name="Chemistry-inorganic sem1">Chemistry sem1 - ₹130</option>
+              
+              <option value="150" data-name="Mathematics-II Sem 2">Mathematics sem2 - ₹150</option>
+              <option value="130" data-name="Physics-EM theory sem2">Physics sem2 - ₹130</option>
+              <option value="130" data-name="Chemistry-organic sem2">Chemistry sem2 - ₹130</option>
+    
+              <option value="500" data-name="Iyear all books ">I_year all books - ₹500</option>
+              <option value="500" data-name="IIyear all books ">II_year all books - ₹500</option>
+    
+            </select>
+          
+            <div class="card-action-row">
+              <div class="item-rate" id="book-price">₹50</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="images/inter_books.webp" class="enlargeable" />
+            <p>B.Sc (BiPC - Botany, Zoology, Chemistry)</p>
+          
+            <label for="book-type">Choose Type:</label>
+            <select id="book-type" class="book-type-selector">
+    
+              <option value="130" data-name="Botany - Diversity Sem 1">Botany - Diversity Sem 1 - ₹130</option>
+              <option value="130" data-name="Zoology - Invertebrates sem1">Zoology - Invertebrates sem1 - ₹130</option>
+              <option value="130" data-name="Chemistry - Physical sem1">Chemistry - Physical sem1 - ₹130</option>
+              
+              <option value="150" data-name="Botany - Anatomy Sem 2">Botany - Anatomy sem2 - ₹130</option>
+              <option value="130" data-name="Zoology - Vertebrates sem2">Zoology - Vertebrates sem2 - ₹130</option>
+              <option value="130" data-name="Chemistry - Organic sem2">Chemistry - Organic sem2 - ₹130</option>
+    
+              <option value="500" data-name="Iyear all books ">I_year all books - ₹500</option>
+              <option value="500" data-name="IIyear all books ">II_year all books - ₹500</option>
+            </select>
+          
+            <div class="card-action-row">
+              <div class="item-rate" id="book-price">₹130</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+        
+          <div class="card">
+            <img src="images/inter_books.webp" class="enlargeable" />
+            <p>B.Com (General / Computers)</p>
+          
+            <label for="book-type">Choose Type:</label>
+            <select id="book-type" class="book-type-selector">
+    
+              <option value="130" data-name="Financial Accounting Sem 1">Financial Accounting Sem 1 - ₹130</option>
+              <option value="120" data-name="Business Organization sem1">Business Organization sem1 - ₹120</option>
+              
+              
+              <option value="120" data-name="Business Economics Sem2">Business Economics sem2 - ₹120</option>
+              <option value="140" data-name="Fundamentals of IT/Computers sem2">Fundamentals of IT/Computers sem2 - ₹140</option>
+              
+              <option value="130" data-name="Banking / Insurance sem3">Banking / Insurance sem3 - ₹140</option>
+              <option value="130" data-name="Auditing / Taxation	 sem4">Auditing / Taxation	 sem4 - ₹150</option>
+    
+              <option value="500" data-name="Iyear all books ">I_year all books - ₹500</option>
+              <option value="500" data-name="IIyear all books ">II_year all books - ₹500</option>
+            </select>
+          
+            <div class="card-action-row">
+              <div class="item-rate" id="book-price">₹110</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="images/inter_books.webp" class="enlargeable" />
+            <p>B.A (History, Political Science, Economics, etc.) </p>
+          
+            <label for="book-type">Choose Type:</label>
+            <select id="book-type" class="book-type-selector">
+    
+              <option value="110" data-name="History - Ancient India Sem 1">History-Ancient India Sem-1 - ₹110</option>
+              <option value="110" data-name="Political Science sem1">Political Science sem1 - ₹110</option>
+              <option value="120" data-name="Economics - Micro	 Sem1">Economics - Micro	 sem2 - ₹120</option>
+
+
+              <option value="110" data-name="Sociology / Public Admin sem2">Sociology/Public Admin sem2 - ₹110</option>
+              <option value="130" data-name="Geography / Psychology sem2">Geography/Psychology sem2 - ₹140</option>
+
+    
+              <option value="500" data-name="Iyear all books ">I_year all books - ₹500</option>
+              <option value="500" data-name="IIyear all books ">II_year all books - ₹500</option>
+            </select>
+          
+            <div class="card-action-row">
+              <div class="item-rate" id="book-price">₹110</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+          
+          <div class="card">
+            <img src="images/inter_books.webp" class="enlargeable" />
+            <p>BBA (Bachelor of Business Administration) </p>
+          
+            <label for="book-type">Choose Type:</label>
+            <select id="book-type" class="book-type-selector">
+    
+              <option value="110" data-name="Principles of Management 1">Principles of Management Sem-1 - ₹110</option>
+              <option value="110" data-name="Business Economics sem1">Business Economics sem1 - ₹110</option>
+              
+
+
+              <option value="110" data-name="Financial Accounting sem2">Financial Accounting Admin sem2 - ₹110</option>
+              <option value="130" data-name="Business Statistics sem2">Business Statistics sem2 - ₹140</option>
+
+    
+              <option value="500" data-name="Iyear all books ">I_year all books - ₹500</option>
+              <option value="500" data-name="IIyear all books ">II_year all books - ₹500</option>
+            </select>
+          
+            <div class="card-action-row">
+              <div class="item-rate" id="book-price">₹110</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+        </section>
+
+<section id="categories" >
+      <div id="competitive_exam_books">
+        <h2>Competitive exam books</h2>
+      </div>
+     <div class="cards">
+        <div class="card">
+            <img src="images/compitation_books.jpeg" class="enlargeable" />
+            <p>ssc_cgl_Books</p>
+          
+            <label for="book-type">Choose Type:</label>
+            <select id="book-type" class="book-type-selector">
+              <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+              <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+              <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+              <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+            </select>
+          
+            <div class="card-action-row">
+              <div class="item-rate" id="book-price">₹10</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="images/compitation_books.jpeg" class="enlargeable" />
+            <p>UPSC/SSC </p>
+          
+            <label for="book-type">Choose Type:</label>
+            <select id="book-type" class="book-type-selector">
+              <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+              <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+              <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+              <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+            </select>
+          
+            <div class="card-action-row">
+              <div class="item-rate" id="book-price">₹10</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+        
+          <div class="card">
+            <img src="images/compitation_books.jpeg" class="enlargeable" />
+            <p>Bank Exams </p>
+          
+            <label for="book-type">Choose Type:</label>
+            <select id="book-type" class="book-type-selector">
+              <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+              <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+              <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+              <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+            </select>
+          
+            <div class="card-action-row">
+              <div class="item-rate" id="book-price">₹10</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="images/compitation_books.jpeg" class="enlargeable" />
+            <p>RRB / Railway</p>
+          
+            <label for="book-type">Choose Type:</label>
+            <select id="book-type" class="book-type-selector">
+              <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+              <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+              <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+              <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+            </select>
+          
+            <div class="card-action-row">
+              <div class="item-rate" id="book-price">₹10</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="images/compitation_books.jpeg" class="enlargeable" />
+            <p>Quantitative Aptitude / Mathematics</p>
+          
+            <label for="book-type">Choose Type:</label>
+            <select id="book-type" class="book-type-selector">
+              <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+              <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+              <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+              <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+            </select>
+          
+            <div class="card-action-row">
+              <div class="item-rate" id="book-price">₹10</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+          </div>
+      </section>
+    
+
+    <section id="categories">
+      <div id="story_books">
+      <h2>story books</h2>
+    </div>
+   <div class="cards">
+      <div class="card">
+          <img src="images/chandamama_kathalu.jpeg" class="enlargeable" />
+          <p>chandamama_kathalu</p>
+        
+          <div class="card-action-row">
+            <div class="item-rate">₹150</div>
+            <button class="add-to-cart-btn" data-name="chandamama_kathalu" data-img="images/chandamama_kathalu.jpeg" data-price="150">Add to Cart</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img src="images/vikramarka_betala.webp" class="enlargeable" />
+          <p>vikramarka_betala</p>
+        
+          <div class="card-action-row">
+            <div class="item-rate">₹180</div>
+              <button class="add-to-cart-btn" data-name="vikramarka_betala" data-img="images/vikramarka_betala.webp" data-price="180">Add to Cart</button>
+          </div>
+        </div>
+      
+        <div class="card">
+          <img src="images/neetikathalu.webp" class="enlargeable" />
+          <p>neetikathalu</p>
+        
+          <div class="card-action-row">
+            <div class="item-rate">₹200</div>
+            <button class="add-to-cart-btn" data-name="neetikathalu" data-img="images/neetikathalu.webp" data-price="200">Add to Cart</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img src="images/tenalirama.webp" class="enlargeable" />
+          <p>tenalirama</p>
+        
+          <div class="card-action-row">
+            <div class="item-rate">₹200</div>
+            <button class="add-to-cart-btn" data-name="tenalirama" data-img="images/tenalirama.webp" data-price="200">Add to Cart</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img src="images/kasimajali.jpeg" class="enlargeable" />
+          <p>kasimajali</p>
+        
+          <div class="card-action-row">
+            <div class="item-rate">₹200</div>
+            <button class="add-to-cart-btn" data-name="kasimajali" data-img="images/kasimajali.jpeg" data-price="200">Add to Cart</button>
+          </div>
+        </div>
+      </section>
+
+<section id="categories" >
+      <div id="religious_books">
+        <h2>Regional Books</h2>
+      </div>
+     <div class="cards">
+        <div class="card">
+            <img src="images/vinayaka.jpeg" class="enlargeable" />
+            <p>Vinayaka Book</p>
+          
+            <div class="card-action-row">
+              <div class="item-rate">₹150</div>
+              <button class="add-to-cart-btn" data-name="Vinayaka Book" data-img="images/vinayaka.jpeg" data-price="150">Add to Cart</button>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="images/ramayanam.jpeg" class="enlargeable" />
+            <p>Ramayanam Book</p>
+          
+            <div class="card-action-row">
+              <div class="item-rate">₹180</div>
+              <button class="add-to-cart-btn" data-name="Ramayanam Book" data-img="images/ramayanam.jpeg" data-price="180">Add to Cart</button>
+            </div>
+          </div>
+        
+          <div class="card">
+            <img src="images/mahabharatam.jpeg" class="enlargeable" />
+            <p>Mahabharatam Book</p>
+          
+            <div class="card-action-row">
+              <div class="item-rate">₹200</div>
+              <button class="add-to-cart-btn" data-name="Mahabharatam Book" data-img="images/mahabharatam.jpeg" data-price="200">Add to Cart</button>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="images/vishnusahatram.jpeg" class="enlargeable" />
+            <p>Vishnu Sahasranamam Book</p>
+          
+            <div class="card-action-row">
+              <div class="item-rate">₹200</div>
+              <button class="add-to-cart-btn" data-name="Vishnu Sahasranamam Book" data-img="images/vishnusahatram.jpeg" data-price="200">Add to Cart</button>
+            </div>
+          </div>
+    
+          <div class="card">
+            <img src="images/satyanarayana.jpeg" class="enlargeable" />
+            <p>Satyanarayana Book</p>
+          
+            <div class="card-action-row">
+              <div class="item-rate">₹200</div>
+              <button class="add-to-cart-btn" data-name="Satyanarayana Book" data-img="images/satyanarayana.jpeg" data-price="200">Add to Cart</button>
+            </div>
+          </div>
+      </section>
+
+
+
+<section id="categories">
+          <div id="pens">
+            <h2>PENS</h2>
+          </div>
+         <div class="cards">
+            <div class="card">
+                <img src="images/pen.jpg" class="enlargeable" />
+                <p>ball_pens(blue-colour)</p>
+              
+              
+
+                <label for="book-type">Choose Type:</label>
+                <select id="book-type" class="book-type-selector">
+                  <option value="5" data-name="Reynolds">Reynolds - ₹5</option>
+                  <option value="7" data-name="Reynolds">Reynolds - ₹7</option>
+                  <option value="6" data-name="Cello">Cello - ₹6</option>
+                  <option value="10" data-name="Cello">Cello - ₹10</option>
+                  <option value="6" data-name="Linc">Linc - ₹6</option>
+                  <option value="10" data-name="Linc">Linc - ₹10</option>
+                  <option value="8" data-name="Montex">Montex - ₹8</option>
+                  <option value="6" data-name="Flair">Flair - ₹6</option>
+                  <option value="7" data-name="Rorito">Rorito - ₹7</option>
+                
+                </select>
+              
+                <div class="card-action-row">
+                  <div class="item-rate" id="book-price">₹5</div>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+        
+
+              <div class="card">
+                <img src="images/pen.jpg" class="enlargeable" />
+                <p>ball_pens(black-colour)</p>
+              
+              
+
+                <label for="book-type">Choose Type:</label>
+                <select id="book-type" class="book-type-selector">
+                  <option value="5" data-name="Reynolds">Reynolds - ₹5</option>
+                  <option value="7" data-name="Reynolds">Reynolds - ₹7</option>
+                  <option value="6" data-name="Cello">Cello - ₹6</option>
+                  <option value="10" data-name="Cello">Cello - ₹10</option>
+                  <option value="6" data-name="Linc">Linc - ₹6</option>
+                  <option value="10" data-name="Linc">Linc - ₹10</option>
+                  <option value="8" data-name="Montex">Montex - ₹8</option>
+                  <option value="6" data-name="Flair">Flair - ₹6</option>
+                  <option value="7" data-name="Rorito">Rorito - ₹7</option>
+                
+                </select>
+              
+                <div class="card-action-row">
+                  <div class="item-rate" id="book-price">₹5</div>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="images/pen.jpg" class="enlargeable" />
+                <p>ball_pens(Red-colour)</p>
+              
+              
+
+                <label for="book-type">Choose Type:</label>
+                <select id="book-type" class="book-type-selector">
+                  <option value="5" data-name="Reynolds">Reynolds - ₹5</option>
+                  <option value="7" data-name="Reynolds">Reynolds - ₹7</option>
+                  <option value="6" data-name="Cello">Cello - ₹6</option>
+                  <option value="10" data-name="Cello">Cello - ₹10</option>
+                  <option value="6" data-name="Linc">Linc - ₹6</option>
+                  <option value="10" data-name="Linc">Linc - ₹10</option>
+                  <option value="8" data-name="Montex">Montex - ₹8</option>
+                  <option value="6" data-name="Flair">Flair - ₹6</option>
+                  <option value="7" data-name="Rorito">Rorito - ₹7</option>
+                
+                </select>
+              
+                <div class="card-action-row">
+                  <div class="item-rate" id="book-price">₹5</div>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="images/gel_pen.webp" class="enlargeable" />
+                <p>gel_pens</p>
+              
+                <label for="book-type">Choose Type:</label>
+                <select id="book-type" class="book-type-selector">
+                  <option value="10" data-name="Reynolds">Reynolds - ₹30</option>
+                  <option value="15" data-name="Cello">Cello - ₹15</option>
+                  <option value="12" data-name="Montex">Montex - ₹12</option>
+                  <option value="10" data-name="Classmate">Classmate - ₹10</option>
+                  <option value="15" data-name="Rorito">Rorito - ₹15</option>
+
+                </select>
+              
+                <div class="card-action-row">
+                  <div class="item-rate" id="book-price">₹10</div>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+            
+              <div class="card">
+                <img src="images/ink_pens.webp" class="enlargeable" />
+                <p>Premium Writing Pens (Low-end Executive Pens)</p>
+              
+                <label for="book-type">Choose Type:</label>
+                <select id="book-type" class="book-type-selector">
+                  <option value="350" data-name="Parker">Parker - ₹350</option>
+                  <option value="200" data-name="Parker">Parker - ₹200</option>
+                  <option value="250" data-name="Pierre Cardin">Pierre Cardin - ₹250</option>
+                  <option value="120" data-name="Flair">Flair - ₹120</option>
+                </select>
+              
+                <div class="card-action-row">
+                  <div class="item-rate" id="book-price">₹10</div>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+        
+              <div class="card">
+                <img src="images/skitch_pen.jpeg" class="enlargeable" />
+                <p>skitch_pens</p>
+              
+                <label for="book-type">Choose Type:</label>
+                <select id="book-type" class="book-type-selector">
+                  <option value="60" data-name="Luxor">Luxor - ₹60</option>
+                  <option value="70" data-name="Faber-Castell">Faber-Castell - ₹70</option>
+                  <option value="15" data-name="Camlin">Camlin - ₹15</option>
+                  <option value="50" data-name="Reynolds">Reynolds - ₹50</option>
+                </select>
+              
+                <div class="card-action-row">
+                  <div class="item-rate" id="book-price">₹10</div>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+        
+              <div class="card">
+                <img src="images/pencials.webp" class="enlargeable" />
+                <p>pencils</p>
+              
+                <label for="book-type">Choose Type:</label>
+                <select id="book-type" class="book-type-selector">
+                  <option value="10" data-name="Apsara">Apsara - ₹10</option>
+                  <option value="8" data-name="Nataraj">Nataraj - ₹8</option>
+                  <option value="10" data-name="Camlin">Camlin - ₹10</option>
+                  <option value="10" data-name="Doms">Doms - ₹10</option>
+                </select>
+              
+                <div class="card-action-row">
+                  <div class="item-rate" id="book-price">₹10</div>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="images/pencials.webp" class="enlargeable" />
+                <p>watercolor pencils</p>
+              
+                <label for="book-type">Choose Type:</label>
+                <select id="book-type" class="book-type-selector">
+                  <option value="10" data-name="Apsara">Apsara - ₹10</option>
+                  <option value="8" data-name="Nataraj">Nataraj - ₹8</option>
+                  <option value="10" data-name="Camlin">Camlin - ₹10</option>
+                  <option value="10" data-name="Doms">Doms - ₹10</option>
+                </select>
+              
+                <div class="card-action-row">
+                  <div class="item-rate" id="book-price">₹10</div>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="images/eraser.jpg" class="enlargeable" />
+                <p>erasers</p>
+              
+                <label for="book-type">Choose Type:</label>
+                <select id="book-type" class="book-type-selector">
+                  <option value="5" data-name="Apsara Non-Dust Eraser">Apsara Non-Dust Eraser- ₹5</option>
+                  <option value="7" data-name="Apsara Platinum Eraser">Apsara Platinum Eraser - ₹7</option>
+                  <option value="5" data-name="Nataraj">Nataraj - ₹5</option>
+                  <option value="7" data-name="Doms">Doms - ₹7</option>
+                </select>
+              
+                <div class="card-action-row">
+                  <div class="item-rate" id="book-price">₹10</div>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+
+              <div class="card">
+                <img src="images/sharpener.jpeg" class="enlargeable" />
+                <p>sharpener</p>
+              
+                <label for="book-type">Choose Type:</label>
+                <select id="book-type" class="book-type-selector">
+                  <option value="10" data-name="Apsara">Apsara - ₹10</option>
+                  <option value="10" data-name="Nataraj">Nataraj - ₹10</option>
+                  <option value="30" data-name="Doms	">Doms	 - ₹10</option>
+                  <option value="50" data-name="Classmate">Classmate - ₹10</option>
+                </select>
+              
+                <div class="card-action-row">
+                  <div class="item-rate" id="book-price">₹10</div>
+                  <button class="add-to-cart-btn">Add to Cart</button>
+                </div>
+              </div>
+  </section>
+
+<section id="categories">
+        <div id="note_books">
+          <h2>notebooks</h2>
+        </div>
+       <div class="cards">
+          <div class="card">
+              <img src="images/white_note_book.jpeg" class="enlargeable" />
+              <p>white_note_book</p>
+            
+              <label for="book-type">Choose Type:</label>
+              <select id="book-type" class="book-type-selector">
+                <option value="50" data-name="Classmate">Classmate- ₹50</option>
+                <option value="90" data-name="Classmate">Classmate - ₹90</option>
+                <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+                <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+              </select>
+            
+              <div class="card-action-row">
+                <div class="item-rate" id="book-price">₹10</div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+      
+            <div class="card">
+              <img src="images/rule_notes.jpeg" class="enlargeable" />
+              <p>rule_notes</p>
+            
+              <label for="book-type">Choose Type:</label>
+              <select id="book-type" class="book-type-selector">
+                <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+                <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+                <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+                <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+              </select>
+            
+              <div class="card-action-row">
+                <div class="item-rate" id="book-price">₹10</div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+          
+            <div class="card">
+              <img src="images/white_note_book.jpeg" class="enlargeable" />
+              <p>rough_note_book</p>
+            
+              <label for="book-type">Choose Type:</label>
+              <select id="book-type" class="book-type-selector">
+                <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+                <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+                <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+                <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+              </select>
+            
+              <div class="card-action-row">
+                <div class="item-rate" id="book-price">₹10</div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+      
+            <div class="card">
+              <img src="images/white_note_book.jpeg" class="enlargeable" />
+              <p>small_white_note_book</p>
+            
+              <label for="book-type">Choose Type:</label>
+              <select id="book-type" class="book-type-selector">
+                <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+                <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+                <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+                <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+              </select>
+            
+              <div class="card-action-row">
+                <div class="item-rate" id="book-price">₹10</div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+      
+            <div class="card">
+              <img src="images/rule_notes.jpeg" class="enlargeable" />
+              <p>small_rule_notes</p>
+            
+              <label for="book-type">Choose Type:</label>
+              <select id="book-type" class="book-type-selector">
+                <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+                <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+                <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+                <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+              </select>
+            
+              <div class="card-action-row">
+                <div class="item-rate" id="book-price">₹10</div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+
+            <div class="card">
+              <img src="images/rule_notes.jpeg" class="enlargeable" />
+              <p>dairys</p>
+            
+              <label for="book-type">Choose Type:</label>
+              <select id="book-type" class="book-type-selector">
+                <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+                <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+                <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+                <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+              </select>
+            
+              <div class="card-action-row">
+                <div class="item-rate" id="book-price">₹10</div>
+                <button class="add-to-cart-btn">Add to Cart</button>
+              </div>
+            </div>
+  </section>
+
+<section id="categories">
+            <div id="Office Supplies">
+              <h2>Office Supplies</h2>
+            </div>
+           <div class="cards">
+              <div class="card">
+                  <img src="images/stick_file.jpeg" class="enlargeable" />
+                  <p>stick_files</p>
+                
+                  <label for="book-type">Choose Type:</label>
+                  <select id="book-type" class="book-type-selector">
+                    <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+                    <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+                    <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+                    <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+                  </select>
+                
+                  <div class="card-action-row">
+                    <div class="item-rate" id="book-price">₹10</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+          
+                <div class="card">
+                  <img src="images/big_stick_files.jpg" class="enlargeable" />
+                  <p>big files</p>
+                
+                  <label for="book-type">Choose Type:</label>
+                  <select id="book-type" class="book-type-selector">
+                    <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+                    <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+                    <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+                    <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+                  </select>
+                
+                  <div class="card-action-row">
+                    <div class="item-rate" id="book-price">₹10</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+              
+                <div class="card">
+                  <img src="images/paper-stick-file.jpeg" class="enlargeable" />
+                  <p>paper_folders</p>
+                
+                  <label for="book-type">Choose Type:</label>
+                  <select id="book-type" class="book-type-selector">
+                    <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+                    <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+                    <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+                    <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+                  </select>
+                
+                  <div class="card-action-row">
+                    <div class="item-rate" id="book-price">₹10</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+          
+                
+          
+                <div class="card">
+                  <img src="images/folders.webp" class="enlargeable" />
+                  <p>folders</p>
+                
+                  <label for="book-type">Choose Type:</label>
+                  <select id="book-type" class="book-type-selector">
+                    <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+                    <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+                    <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+                    <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+                  </select>
+                
+                  <div class="card-action-row">
+                    <div class="item-rate" id="book-price">₹10</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+        
+                <div class="card">
+                  <img src="images/clip-board.webp" class="enlargeable" />
+                  <p>clipboards</p>
+                
+                  <label for="book-type">Choose Type:</label>
+                  <select id="book-type" class="book-type-selector">
+                    <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+                    <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+                    <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+                    <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+                  </select>
+                
+                  <div class="card-action-row">
+                    <div class="item-rate" id="book-price">₹10</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <img src="images/Staplers.webp" class="enlargeable" />
+                  <p>staplers</p>
+                
+                  <label for="book-type">Choose Type:</label>
+                  <select id="book-type" class="book-type-selector">
+                    <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+                    <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+                    <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+                    <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+                  </select>
+                
+                  <div class="card-action-row">
+                    <div class="item-rate" id="book-price">₹10</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <img src="images/tapes.webp" class="enlargeable" />
+                  <p>tapes</p>
+                
+                  <label for="book-type">Choose Type:</label>
+                  <select id="book-type" class="book-type-selector">
+                    <option value="10" data-name="1Notebook">Notebook - ₹10</option>
+                    <option value="20" data-name="2Notebook">Notebook - ₹20</option>
+                    <option value="30" data-name="3Notebook">Notebook - ₹30</option>
+                    <option value="50" data-name="4Notebook">Notebook - ₹50</option>
+                  </select>
+                
+                  <div class="card-action-row">
+                    <div class="item-rate" id="book-price">₹10</div>
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                  </div>
+                </div>
+
+                
+  </section>
+
+  <section id="categories" >
+    <div id="School Supplies">
+      <h2>School Supplies</h2>
+    </div>
+   <div class="cards">
+      <div class="card">
+          <img src="images/school-bags.webp" class="enlargeable" />
+          <p>School bags</p>
+        
+          <div class="card-action-row">
+            <div class="item-rate">₹150</div>
+            <button class="add-to-cart-btn" data-name="School bags" data-img="images/School bags.webp" data-price="150">Add to Cart</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img src="images/geomotry-box.webp" class="enlargeable" />
+          <p>Geometry boxes</p>
+        
+          <div class="card-action-row">
+            <div class="item-rate">₹180</div>
+            <button class="add-to-cart-btn" data-name="Geometry boxes" data-img="images/Geometry boxes.webp" data-price="180">Add to Cart</button>
+          </div>
+        </div>
+      
+        <div class="card">
+          <img src="images/School_supplies.webp" class="enlargeable" />
+          <p>School_supplies</p>
+        
+          <div class="card-action-row">
+            <div class="item-rate">₹200</div>
+            <button class="add-to-cart-btn" data-name="Mahabharatam Book" data-img="images/mahabharatam.jpeg" data-price="200">Add to Cart</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img src="images/School_supplies.webp" class="enlargeable" />
+          <p>School_supplies</p>
+        
+          <div class="card-action-row">
+            <div class="item-rate">₹200</div>
+            <button class="add-to-cart-btn" data-name="Vishnu Sahasranamam Book" data-img="images/vishnusahatram.jpeg" data-price="200">Add to Cart</button>
+          </div>
+        </div>
+  
+        <div class="card">
+          <img src="images/School_supplies.webp" class="enlargeable" />
+          <p>School_supplies</p>
+        
+          <div class="card-action-row">
+            <div class="item-rate">₹200</div>
+            <button class="add-to-cart-btn" data-name="Satyanarayana Book" data-img="images/satyanarayana.jpeg" data-price="200">Add to Cart</button>
+          </div>
+        </div>
+    </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+   
+  </footer>
+
+  <!-- Modal for enlarged image -->
+  <div id="imageModal">
+    <img src="" alt="Enlarged" />
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>local market</h3>
+        <p>Groceries Home delivered. Your one-stop shop for fresh produce, snacks, and daily essentials.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email:localmarket17@gmail.com</p>
+        <p>Phone: 9966284758 / 8340825823</p>
+      </div>
+    </div>
+    
+  </footer>
+  
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchInput = document.getElementById('siteSearchInput');
+      if (!searchInput) return;
+
+      const cards = document.querySelectorAll('.cards .card');
+
+      searchInput.addEventListener('input', function() {
+        const filter = searchInput.value.trim().toLowerCase();
+        if (!filter) return;
+
+        let foundCard = null;
+        cards.forEach(card => {
+          const text = card.textContent.toLowerCase();
+          if (!foundCard && text.includes(filter)) {
+            foundCard = card;
+          }
+        });
+
+        if (foundCard) {
+          foundCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          foundCard.classList.add('highlight-card');
+          setTimeout(() => foundCard.classList.remove('highlight-card'), 1500);
+        }
+      });
+    });
+  </script>
+</body>
+</html>

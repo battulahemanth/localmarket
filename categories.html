@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Categories - Local Market</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav>
+    <div class="logo"><span class="logo-icon"> 
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61l1.38-7.39H6"/></svg>
+    </span><span class="logo-text">localmarket</span></div>
+    <ul id="navbarLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="add-to-cart.html">Cart</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="order-history.html">Order History</a></li>
+    </ul>
+    <button id="modeToggle">🌙</button>
+    <button id="menuToggle" class="menu-toggle" aria-label="Open navigation">&#9776;</button>
+
+    <form id="siteSearchForm" style="margin-left: 20px; display: flex; align-items: center;">
+      <input type="text" id="siteSearchInput" placeholder="Search..." style="padding: 5px; border-radius: 4px; border: 1px solid #ccc;">
+      <button type="submit" style="margin-left: 5px; padding: 5px 10px; border-radius: 4px; border: none; background: #333; color: #fff;">Search</button>
+    </form>
+  </nav>
+
+  <section id="categories">
+    <h2>Books</h2>
+    <section id="categories">
+      <div class="cards">
+        <div class="card"><img src="images/accadamic_books.webp" class="enlargeable"/><p><a href="books.html#accadamic_books" class="card-link">Academic Books</a></p></div>
+        <div class="card"><img src="images/chidren_books.jpg" class="enlargeable"/><p><a href="books.html#children_books" class="card-link">Children's Books</a></p></div>
+        <div class="card"><img src="images/Religious_books.webp" class="enlargeable"/><p><a href="books.html#religious_books" class="card-link">Religious Books</a></p></div>
+        <div class="card"><img src="images/margines.jpeg" class="enlargeable"/><p><a href="books.html#competitive_exam_books" class="card-link">competitive books</a></p></div>
+      </div>
+    </section>
+  
+    
+  </section>
+  <section id="categories">
+    <h2>Stationery Section</h2>
+    <section id="categories">
+      <div class="cards">
+        <div class="card"><img src="images/pen.jpg" class="enlargeable"/><p><a href="books.html#pens" class="card-link">PENS</a></p></div>
+        <div class="card"><img src="images/books.webp" class="enlargeable"/><p><a href="books.html#books" class="card-link">BOOKS</a></p></div>
+        <div class="card"><img src="images/Office_Supplies.webp" class="enlargeable"/><p><a href="books.html#office_supplies" class="card-link">Office Supplies</a></p></div>
+        <div class="card"><img src="images/campas_box.jpeg" class="enlargeable"/><p><a href="books.html#" class="card-link">School Supplies</a></p></div>
+      </div>
+    </section>
+  
+      </section>
+
+  <!-- <section id="fancy">
+    <h2>fancy</h2>
+    <div class="cards">
+      <div class="card"><img src="images/fancy1.webp" class="enlargeable"/><p>fancy bangles</p><div class="card-action-row"><div class="item-rate">₹70</div><button class="add-to-cart-btn" data-name="fancy item 1" data-img="images/fancy1.webp" data-price="70">Add to Cart</button></div></div>
+      <div class="card"><img src="images/fancy2.webp" class="enlargeable"/><p>bangles</p><div class="card-action-row"><div class="item-rate">₹90</div><button class="add-to-cart-btn" data-name="fancy item 2" data-img="images/fancy2.webp" data-price="90">Add to Cart</button></div></div>
+      <div class="card"><img src="images/fancy3.webp" class="enlargeable"/><p>dress materials</p><div class="card-action-row"><div class="item-rate">₹110</div><button class="add-to-cart-btn" data-name="fancy item 3" data-img="images/fancy3.webp" data-price="110">Add to Cart</button></div></div>
+      <div class="card"><img src="images/fancy4.webp" class="enlargeable"/><p>casmatic</p><div class="card-action-row"><div class="item-rate">₹85</div><button class="add-to-cart-btn" data-name="fancy item 4" data-img="images/fancy4.webp" data-price="85">Add to Cart</button></div></div>
+      <div class="card"><img src="images/fancy5.webp" class="enlargeable"/><p>chines</p><div class="card-action-row"><div class="item-rate">₹95</div><button class="add-to-cart-btn" data-name="fancy item 5" data-img="images/fancy5.webp" data-price="95">Add to Cart</button></div></div>
+    </div>
+  </section>
+
+ 
+  <section id="food">
+    <h2>food</h2>
+    <div class="cards">
+      <div class="card"><img src="images/biryani.jpg" class="enlargeable"/><p>biryani</p><div class="card-action-row"><div class="item-rate">₹40</div><button class="add-to-cart-btn" data-name="food item 1" data-img="images/food.webp" data-price="40">Add to Cart</button></div></div>
+      <div class="card"><img src="images/fried rice.jpeg" class="enlargeable"/><p>fried rice</p><div class="card-action-row"><div class="item-rate">₹55</div><button class="add-to-cart-btn" data-name="food item 2" data-img="images/food.webp" data-price="55">Add to Cart</button></div></div>
+      <div class="card"><img src="images/noodles.webp" class="enlargeable"/><p>noodles</p><div class="card-action-row"><div class="item-rate">₹65</div><button class="add-to-cart-btn" data-name="food item 3" data-img="images/food.webp" data-price="65">Add to Cart</button></div></div>
+      <div class="card"><img src="images/manchu.webp" class="enlargeable"/><p>manchurian</p><div class="card-action-row"><div class="item-rate">₹65</div><button class="add-to-cart-btn" data-name="food item 3" data-img="images/food.webp" data-price="65">Add to Cart</button></div></div>
+      <div class="card"><img src="images/kabob.webp" class="enlargeable"/><p>kabob</p><div class="card-action-row"><div class="item-rate">₹65</div><button class="add-to-cart-btn" data-name="food item 3" data-img="images/food.webp" data-price="65">Add to Cart</button></div></div>
+  
+    </div>
+  </section> -->
+
+  <!-- <section id="supermarket">
+    <h2>supermarket</h2>
+    <div class="cards">
+      
+      <div class="card"><img src="images/rice-bags.jpg" class="enlargeable"/><p><a href="categories.html#stationary" class="card-link">Rice</a></p></div>
+        <div class="card"><img src="images/wheat.webp" class="enlargeable"/><p><a href="books.html#books" class="card-link">Wheat Flour</a></p></div>
+        <div class="card"><img src="images/toor-dal.webp" class="enlargeable"/><p><a href="books.html#office_supplies" class="card-link">Toor Dal</a></p></div>
+        <div class="card"><img src="images/sugar.jpeg" class="enlargeable"/><p><a href="books.html#" class="card-link">Sugar</a></p></div>
+        <div class="card"><img src="images/Rava.webp" class="enlargeable"/><p><a href="books.html#" class="card-link">Rava</a></p></div>
+        <div class="card"><img src="images/poha.webp" class="enlargeable"/><p><a href="books.html#" class="card-link">poha</a></p></div>
+        <div class="card"><img src="images/oil-packets.webp" class="enlargeable"/><p><a href="books.html#" class="card-link">oil-packets</a></p></div>
+        <div class="card"><img src="images/tea.webp" class="enlargeable"/><p><a href="books.html#" class="card-link">tea/coffee </a></p></div>
+        
+        <div class="card"><img src="images/soap.jpeg" class="enlargeable"/><p><a href="books.html#" class="card-link">soap</a></p></div>
+        <div class="card"><img src="images/Shampoo.jpeg" class="enlargeable"/><p><a href="books.html#" class="card-link">Shampoo</a></p></div>
+        <div class="card"><img src="images/Toothpaste.webp" class="enlargeable"/><p><a href="books.html#" class="card-link">Toothpaste</a></p></div>
+        <div class="card"><img src="images/Hair Oil.jpg" class="enlargeable"/><p><a href="books.html#" class="card-link">hair-oil</a></p></div>
+        <div class="card"><img src="images/Face Wash.webp" class="enlargeable"/><p><a href="books.html#" class="card-link">Face-wash</a></p></div>
+        <div class="card"><img src="images/Handwash.jpeg" class="enlargeable"/><p><a href="books.html#" class="card-link">Handwash</a></p></div>
+
+      
+
+    </div>
+  </section> -->
+
+
+  <!-- Footer -->
+  <footer id="contact">
+   
+  </footer>
+
+  <!-- Modal for enlarged image -->
+  <div id="imageModal">
+    <img src="" alt="Enlarged" />
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>local market</h3>
+        <p>Groceries Home delivered. Your one-stop shop for fresh produce, snacks, and daily essentials.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email:localmarket17@gmail.com</p>
+        <p>Phone: 9966284758 / 8340825823</p>
+      </div>
+    </div>
+    
+  </footer>
+
+ 
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('menuToggle').addEventListener('click', function(event) {
+      document.getElementById('navbarLinks').classList.toggle('active');
+      event.stopPropagation();
+    });
+    document.addEventListener('click', function(event) {
+      var navbarLinks = document.getElementById('navbarLinks');
+      var menuToggle = document.getElementById('menuToggle');
+      if (
+        navbarLinks.classList.contains('active') &&
+        !navbarLinks.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ) {
+        navbarLinks.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html> 

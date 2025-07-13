@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>local market</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Loader Magic -->
+  <div id="loader-magic">
+    <div class="magic-spinner"></div>
+    <div class="magic-text">Loading localmarket...</div>
+  </div>
+
+  <!-- Loader -->
+  <div id="loader">
+    <img src="assets/loader.gif" alt="Loading..." />
+  </div>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="logo"><span class="logo-icon"> 
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61l1.38-7.39H6"/></svg>
+    </span><span class="logo-text">localmarket</span></div>
+    <ul id="navbarLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="add-to-cart.html">my Cart</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="order-history.html">Order History</a></li>
+    </ul>
+    <button id="modeToggle">🌙</button>
+    <button id="menuToggle" class="menu-toggle" aria-label="Open navigation">&#9776;</button>
+  </nav>
+
+  <!-- Hero Section inspired by Blinkit with full background image -->
+  <section id="hero" class="blinkit-hero hero-bg-image">
+    <div class="hero-overlay"></div>
+    <div class="hero-content-wrapper">
+      <div class="hero-left">
+        <h1>Groceries home delivered </h1>
+        <p>stationary, fancy,supermarket,foods</p>
+        <!-- <form id="siteSearchForm" style="margin-left: 20px; display: flex; align-items: center;">
+          <input type="text" id="siteSearchInput" placeholder="Search..." style="padding: 5px; border-radius: 4px; border: 1px solid #ccc;">
+          <button type="submit" style="margin-left: 5px; padding: 5px 10px; border-radius: 4px; border: none; background: #333; color: #fff;">Search</button>
+        </form> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section id="categories">
+    <h2>Popular Categories</h2>
+    <div class="cards">
+      <div class="card"><img src="images/stationary.webp" class="enlargeable"/><p><a href="categories.html" class="card-link">stationary</a></p></div>
+      <div class="card"><img src="images/fancy.webp" class="enlargeable"/><p><a href="" class="card-link">fancy(up-comming)</a></p></div>
+      <div class="card"><img src="images/supermarket.webp" class="enlargeable"/><p><a href="" class="card-link">supermarket(up-comming)</a></p></div>
+      <div class="card"><img src="images/food.webp" class="enlargeable"/><p><a href="" class="card-link">food(up-comming)</a></p></div>
+    </div>
+  </section>
+<section class="note-section">
+  <h2>NOTE :</h2>
+  <h5>All books and stationery items are available on our website. If you don't find a specific item you're looking for, please contact us through the contact page. You can use the message box to let us know the item you need or any corrections or suggestions you may have. </h5>
+  <h5>మా వెబ్‌సైట్‌లో అన్ని రకముల పుస్తకాలు మరియు స్టేషనరీ వస్తువులు లభ్యమగును, మీరు కోరిన ప్రత్యేకమైన వస్తువు లభించకపోతే, దయచేసి contact  no ను సంప్రదించండి,తద్వారా మీరు కోరిన వస్తువులు అందించగలం. మీరు ఏవైనా సూచనలు, సలహాలు ఇవ్వదలచిన  వారు దయచేసి message box లో  తెలియజేసి మా వ్యాపారాభివృద్ధికి తోడ్పాటు అందించ ప్రార్ధన🙏.
+</h5>
+</section>
+  <!-- Footer -->
+  <footer id="contact">
+   
+  </footer>
+
+  <!-- Modal for enlarged image -->
+  <div id="imageModal">
+    <img src="" alt="Enlarged" />
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>local market</h3>
+        <p>Groceries Home delivered. Your one-stop shop for fresh produce, snacks, and daily essentials.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email:localmarket17@gmail.com</p>
+        <p>Phone: 9966284758 / 8340825823 </p>
+      </div>
+    </div>
+    
+  </footer>
+  
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('siteSearchForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const query = document.getElementById('siteSearchInput').value.trim();
+      if (query) {
+        // This will use Google to search your site (replace 'localmarket' with your actual domain if you have one)
+        window.open(`https://www.google.com/search?q=site:${window.location.hostname}+${encodeURIComponent(query)}`, '_blank');
+      }
+    });
+  </script>
+    <script>
+      document.getElementById('menuToggle').addEventListener('click', function(event) {
+        document.getElementById('navbarLinks').classList.toggle('active');
+        event.stopPropagation(); // Prevent this click from bubbling up
+      });
+  
+      // Close navbar when clicking outside
+      document.addEventListener('click', function(event) {
+        var navbarLinks = document.getElementById('navbarLinks');
+        var menuToggle = document.getElementById('menuToggle');
+        if (
+          navbarLinks.classList.contains('active') &&
+          !navbarLinks.contains(event.target) &&
+          !menuToggle.contains(event.target)
+        ) {
+          navbarLinks.classList.remove('active');
+        }
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order History - Local Market</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .history-container {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: var(--nav-bg);
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+    
+    .history-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .history-header h2 {
+      color: var(--text-color);
+      margin-bottom: 0.5rem;
+    }
+    
+    .order-card {
+      background: var(--bg-color);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #e0e0e0;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .order-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+    
+    .order-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .order-id {
+      font-weight: bold;
+      color: #3c17f3;
+      font-size: 1.1rem;
+    }
+    
+    .order-date {
+      color: #666;
+      font-size: 0.9rem;
+    }
+    
+    .order-status {
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    .status-confirmed {
+      background: #d4edda;
+      color: #155724;
+    }
+    
+    .status-delivered {
+      background: #d1ecf1;
+      color: #0c5460;
+    }
+    
+    .status-cancelled {
+      background: #f8d7da;
+      color: #721c24;
+    }
+    
+    .order-items {
+      margin-bottom: 1rem;
+    }
+    
+    .order-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .order-item:last-child {
+      border-bottom: none;
+    }
+    
+    .order-total {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      font-size: 1.1rem;
+      color: #3c17f3;
+      padding-top: 1rem;
+      border-top: 2px solid #e0e0e0;
+    }
+    
+    .order-details {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+    }
+    
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+    
+    .detail-row:last-child {
+      margin-bottom: 0;
+    }
+    
+    .empty-state {
+      text-align: center;
+      padding: 3rem;
+      color: var(--text-color);
+    }
+    
+    .empty-state h3 {
+      margin-bottom: 1rem;
+    }
+    
+    .empty-state p {
+      margin-bottom: 2rem;
+      color: #666;
+    }
+    
+    .browse-btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: #3c17f3;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    
+    .browse-btn:hover {
+      background: #2a0fd8;
+    }
+    
+    @media (max-width: 768px) {
+      .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+      
+      .detail-row {
+        flex-direction: column;
+        gap: 0.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><span class="logo-icon"> 
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61l1.38-7.39H6"/></svg>
+    </span><span class="logo-text">localmarket</span></div>
+    <ul id="navbarLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="add-to-cart.html">my Cart</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="order-history.html">Order History</a></li>
+    </ul>
+    <button id="modeToggle">🌙</button>
+    <button id="menuToggle" class="menu-toggle" aria-label="Open navigation">&#9776;</button>
+  </nav>
+
+  <div class="history-container">
+    <div class="history-header">
+      <h2>Your Order History</h2>
+      <p>Track your past orders and their status</p>
+    </div>
+    
+    <div id="orders-container">
+      <!-- Orders will be loaded here -->
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>local market</h3>
+        <p>Groceries Home delivered. Your one-stop shop for fresh produce, snacks, and daily essentials.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="categories.html">Categories</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>Email:localmarket17@gmail.com</p>
+        <p>Phone: 9966284758 / 8340825823</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Load and display order history
+    function loadOrderHistory() {
+      const orders = JSON.parse(localStorage.getItem('orderHistory') || '[]');
+      const container = document.getElementById('orders-container');
+      
+      if (orders.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <h3>No Orders Yet</h3>
+            <p>You haven't placed any orders yet. Start shopping to see your order history here!</p>
+            <a href="categories.html" class="browse-btn">Browse Products</a>
+          </div>
+        `;
+        return;
+      }
+      
+      // Sort orders by date (newest first)
+      orders.sort((a, b) => new Date(b.paymentDate) - new Date(a.paymentDate));
+      
+      container.innerHTML = orders.map(order => {
+        const orderDate = new Date(order.paymentDate);
+        const formattedDate = orderDate.toLocaleDateString('en-IN', {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+        
+        let subtotal = 0;
+        order.items.forEach(item => {
+          subtotal += item.price * item.quantity;
+        });
+        
+        const deliveryFee = 40;
+        const tax = subtotal * 0.05;
+        const total = subtotal + deliveryFee + tax;
+        
+        // Determine order status (simplified logic)
+        const daysSinceOrder = Math.floor((new Date() - orderDate) / (1000 * 60 * 60 * 24));
+        let status = 'confirmed';
+        let statusText = 'Confirmed';
+        
+        if (daysSinceOrder > 7) {
+          status = 'delivered';
+          statusText = 'Delivered';
+        } else if (daysSinceOrder > 2) {
+          status = 'confirmed';
+          statusText = 'Out for Delivery';
+        }
+        
+        return `
+          <div class="order-card">
+            <div class="order-header">
+              <div>
+                <div class="order-id">${order.orderId}</div>
+                <div class="order-date">${formattedDate}</div>
+              </div>
+              <div class="order-status status-${status}">${statusText}</div>
+            </div>
+            
+            <div class="order-items">
+              ${order.items.map(item => `
+                <div class="order-item">
+                  <span>${item.name} (${item.quantity}x)</span>
+                  <span>₹${item.price * item.quantity}</span>
+                </div>
+              `).join('')}
+            </div>
+            
+            <div class="order-total">
+              <span>Total Amount:</span>
+              <span>₹${total.toFixed(2)}</span>
+            </div>
+            
+            <div class="order-details">
+              <div class="detail-row">
+                <span><strong>Payment Method:</strong></span>
+                <span>${order.paymentMethod.toUpperCase()}</span>
+              </div>
+              <div class="detail-row">
+                <span><strong>Delivery Address:</strong></span>
+                <span>${order.customerInfo.address}</span>
+              </div>
+              <div class="detail-row">
+                <span><strong>Contact:</strong></span>
+                <span>${order.customerInfo.name} - ${order.customerInfo.phone}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+    
+    // Load order history when page loads
+    loadOrderHistory();
+    
+    // Add some sample orders if no orders exist (for demonstration)
+    function addSampleOrders() {
+      const existingOrders = JSON.parse(localStorage.getItem('orderHistory') || '[]');
+      
+      if (existingOrders.length === 0) {
+        const sampleOrders = [
+          {
+            orderId: 'ORD' + (Date.now() - 86400000 * 10), // 10 days ago
+            items: [
+              { name: 'Notebook', price: 50, quantity: 2, img: 'images/white_note_book.jpeg' },
+              { name: 'Pen', price: 20, quantity: 3, img: 'images/pen.jpg' }
+            ],
+            customerInfo: {
+              name: 'John Doe',
+              phone: '9876543210',
+              address: '123 Main Street, City, State - 123456'
+            },
+            paymentMethod: 'card',
+            status: 'delivered',
+            paymentDate: new Date(Date.now() - 86400000 * 10).toISOString()
+          },
+          {
+            orderId: 'ORD' + (Date.now() - 86400000 * 3), // 3 days ago
+            items: [
+              { name: 'Geometry Box', price: 80, quantity: 1, img: 'images/Geometry boxes.webp' },
+              { name: 'Eraser', price: 15, quantity: 2, img: 'images/eraser.jpg' }
+            ],
+            customerInfo: {
+              name: 'John Doe',
+              phone: '9876543210',
+              address: '123 Main Street, City, State - 123456'
+            },
+            paymentMethod: 'upi',
+            status: 'confirmed',
+            paymentDate: new Date(Date.now() - 86400000 * 3).toISOString()
+          }
+        ];
+        
+        localStorage.setItem('orderHistory', JSON.stringify(sampleOrders));
+        loadOrderHistory();
+      }
+    }
+    
+    // Uncomment the line below to add sample orders for demonstration
+    // addSampleOrders();
+
+    document.getElementById('menuToggle').addEventListener('click', function(event) {
+      document.getElementById('navbarLinks').classList.toggle('active');
+      event.stopPropagation();
+    });
+    document.addEventListener('click', function(event) {
+      var navbarLinks = document.getElementById('navbarLinks');
+      var menuToggle = document.getElementById('menuToggle');
+      if (
+        navbarLinks.classList.contains('active') &&
+        !navbarLinks.contains(event.target) &&
+        !menuToggle.contains(event.target)
+      ) {
+        navbarLinks.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html> 
